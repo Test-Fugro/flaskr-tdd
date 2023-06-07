@@ -20,8 +20,8 @@ basedir = Path(__file__).resolve().parent
 
 # configuration
 DATABASE = "flaskr.db"
-USERNAME = "admin"
-PASSWORD = "admin"
+USERNAME =  os.getenv("username")
+PASSWORD = os.getenv("password")
 SECRET_KEY = "change_me"
 url = os.getenv("DATABASE_URL", f"sqlite:///{Path(basedir).joinpath(DATABASE)}")
 
